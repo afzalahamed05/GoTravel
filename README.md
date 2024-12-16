@@ -1,2 +1,3 @@
 # GoTravel
-DAO Project
+DAO Project - everything in one
+
