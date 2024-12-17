@@ -1,1 +1,322 @@
-hi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoTravel - Your Dream Vacation Awaits</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <!-- Logo with Pacifico font -->
+        <div class="logo" style="font-family: 'Pacifico', cursive; font-size: 36px; color: white; margin-bottom: 10px;">
+            GoTravel
+        </div>
+        <ul style="list-style-type: none; padding: 0; margin: 0; text-align: center;">
+            <!-- Navigation links with Times New Roman -->
+            <li style="display: inline-block; margin: 0 15px;">
+                <a href="#about" style="font-family: 'Times New Roman', Times, serif; font-size: 18px; color: white; text-transform: uppercase; text-decoration: none;">About Us</a>
+            </li>
+            <li style="display: inline-block; margin: 0 15px;">
+                <a href="#contact" style="font-family: 'Times New Roman', Times, serif; font-size: 18px; color: white; text-transform: uppercase; text-decoration: none;">Contact</a>
+            </li>
+            <li style="display: inline-block; margin: 0 15px;">
+                <a href="#packages" style="font-family: 'Times New Roman', Times, serif; font-size: 18px; color: white; text-transform: uppercase; text-decoration: none;">Packages</a>
+            </li>
+            <li style="display: inline-block; margin: 0 15px;">
+                <a href="#destinations" style="font-family: 'Times New Roman', Times, serif; font-size: 18px; color: white; text-transform: uppercase; text-decoration: none;">Available Destinations</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Welcome to GoTravel</h1>
+        <p>Your dream vacation is just a few clicks away!</p>
+    </header>
+
+    <!-- Booking Form Section -->
+    <section class="booking-form">
+        <h2>Plan Your Trip</h2>
+        <form>
+            <label for="destination">DESTINATION:</label>
+            <input
+                type="text"
+                id="destination"
+                name="destination"
+                placeholder="Where are you going?"
+                required
+                oninput="filterDestinations()"
+            >
+            <!-- Suggestion Box -->
+            <ul id="suggestion-box"></ul>
+    
+            <label for="days">NUMBER OF DAYS:</label>
+            <input type="number" id="days" name="days" placeholder="How many days?" required>
+    
+            <label for="room">ROOM TYPE:</label>
+            <select id="room" name="room">
+                <option value="single">Single Room</option>
+                <option value="double">Double Room</option>
+                <option value="suite">Suite</option>
+            </select>
+    
+            <!-- Shortened Price Range Section -->
+            <label for="price-range">PRICE RANGE:</label>
+            <input Width=15% height: 12px; width: 12px type="range" id="price-range" name="price-range" min="1000" max="50000" step="1000" oninput="priceOutput.value = this.value">
+            <output id="priceOutput" style="margin-left: 10px;">100000</output>
+            <p style="font-size: 14px; margin-top: 5px;">(Drag to select a range between ₹1000 and ₹10000)</p>
+            
+            <!-- Booking Form Section -->
+<section class="booking-form">
+    <h2>Plan Your Trip</h2>
+    <form>
+        <label for="destination">DESTINATION:</label>
+        <input type="text" id="destination" name="destination" placeholder="Where are you going?" required>
+
+        <label for="days">NUMBER OF DAYS:</label>
+        <input type="number" id="days" name="days" placeholder="How many days?" required>
+
+        <label for="room">ROOM TYPE:</label>
+        <select id="room" name="room">
+            <option value="single">Single Room</option>
+            <option value="double">Double Room</option>
+            <option value="suite">Suite</option>
+        </select>
+
+        <!-- Shortened Price Range Section -->
+        <label for="price-range">PRICE RANGE:</label>
+        <input Width=15% height: 12px; width: 12px type="range" id="price-range" name="price-range" min="1000" max="50000" step="1000" oninput="priceOutput.value = this.value">
+        <output id="priceOutput" style="margin-left: 10px;">100000</output>
+        <p style="font-size: 14px; margin-top: 5px;">(Drag to select a range between ₹1000 and ₹10000)</p>
+
+        <!-- Hotel Rating Section -->
+        <label for="rating">HOTEL RATING:</label>
+        <div class="stars">
+            <div class="star" data-rating="1"></div>
+            <div class="star" data-rating="2"></div>
+            <div class="star" data-rating="3"></div>
+            <div class="star" data-rating="4"></div>
+            <div class="star" data-rating="5"></div>
+        </div>
+
+        <button type="submit">Submit Plan</button>
+    </form>
+</section>
+
+            <button type="submit">Submit Plan</button>
+        </form>
+    </section>
+    
+    
+
+    <!-- About Us Section -->
+    <section id="about" style="
+    text-align: center; 
+    margin: 0 auto; 
+    padding: 20px;
+">
+    <h2 style="
+        font-family: 'Playfair Display', serif; 
+        font-size: 28px; 
+        margin-bottom: 10px;
+    ">
+        ABOUT US
+    </h2>
+    <p style="
+        font-family: 'Roboto', sans-serif; 
+        font-size: 18px; 
+        line-height: 1.6; 
+        color: #333;
+    ">
+        GoTravel is your go-to travel companion for unforgettable journeys. 
+        We provide tailored vacation packages to bring your travel dreams to life.
+    </p>
+<!-- Contact Section -->
+<section id="about" style="
+    text-align: center; 
+    margin: 0 auto; 
+    padding: 20px;
+">
+    <h2 style="
+        font-family: 'Playfair Display', serif; 
+        font-size: 28px; 
+        margin-bottom: 10px;
+    ">
+        CONTACT US
+    </h2>
+    <p style="
+        font-family: 'Roboto', sans-serif; 
+        font-size: 18px; 
+        line-height: 1.6; 
+        color: #333;
+    ">
+        Phone: +9600061430<br>
+        Email: support@gotravel.com
+    </p>
+</section>
+
+<!-- Packages Section -->
+<section id="packages" style="
+    text-align: center; 
+    margin: 0 auto; 
+    padding: 20px; 
+    background-color: #2b7a61;
+">
+    <h2 style="
+        font-family: 'Playfair Display', serif; 
+        font-size: 28px; 
+        margin-bottom: 20px;
+    ">
+        OUR PACKAGES
+    </h2>
+    <div class="package-list" style="
+        display: flex; 
+        justify-content: center; 
+        gap: 20px; 
+        flex-wrap: wrap;
+    ">
+        <div class="package" style="
+            text-align: center; 
+            background-color: #98af4c; 
+            padding: 20px; 
+            border-radius: 10px; 
+            width: 250px; 
+            color: #fff;
+        ">
+            <h3 style="
+                font-family: 'Playfair Display', serif; 
+                font-size: 22px; 
+                margin-bottom: 10px;
+            ">
+                Beach Getaway
+            </h3>
+            <p style="
+                font-family: 'Roboto', sans-serif; 
+                font-size: 16px; 
+                margin: 0;
+            ">
+                Relax by the shore in an all-inclusive resort.
+            </p>
+        </div>
+        <div class="package" style="
+            text-align: center; 
+            background-color: #77af4c;
+            padding: 20px; 
+            border-radius: 10px; 
+            width: 250px; 
+            color: #fff;
+        ">
+            <h3 style="
+                font-family: 'Playfair Display', serif; 
+                font-size: 22px; 
+                margin-bottom: 10px;
+            ">
+                Mountain Adventure
+            </h3>
+            <p style="
+                font-family: 'Roboto', sans-serif; 
+                font-size: 16px; 
+                margin: 0;
+            ">
+                Experience the thrill of mountain hiking.
+            </p>
+        </div>
+        <div class="package" style="
+            text-align: center; 
+            background-color: #4caf5e; 
+            padding: 20px; 
+            border-radius: 10px; 
+            width: 250px; 
+            color: #fff;
+        ">
+            <h3 style="
+                font-family: 'Playfair Display', serif; 
+                font-size: 22px; 
+                margin-bottom: 10px;
+            ">
+                Cultural Tour
+            </h3>
+            <p style="
+                font-family: 'Roboto', sans-serif; 
+                font-size: 16px; 
+                margin: 0;
+            ">
+                Explore historical landmarks and cities.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Available Destinations Section -->
+    <section id="destinations">
+        <h2>AVAILABLE DESTINATIONS</h2>
+        <ul>
+            <li>Paris</li>
+            <li>Tokyo</li>
+            <li>New York</li>
+            <li>Sydney</li>
+            <li>Dubai</li>
+        </ul>
+    </section>
+    <script>
+        // Predefined list of cities
+        const cities = ["Paris", "Tokyo", "New York", "Sydney", "Dubai", "Los Angeles", "London", "Mumbai", "Bangkok", "Berlin", "Los Angeles", "San Francisco", "New Orleans", "Las Vegas", "Neuchâtel", "New Delhi"];
+
+
+        function filterDestinations() {
+            const input = document.getElementById("destination").value.toLowerCase();
+            const suggestionBox = document.getElementById("suggestion-box");
+
+
+            // Clear previous suggestions
+            suggestionBox.innerHTML = "";
+
+
+            if (input) {
+                // Filter cities based on input
+                const filteredCities = cities.filter(city => city.toLowerCase().startsWith(input));
+
+
+                // Display at least 4 suggestions
+                if (filteredCities.length > 0) {
+                    suggestionBox.style.display = "block";
+                    // Show the first 4 or all matched cities
+                    const maxSuggestions = Math.min(4, filteredCities.length);
+                    for (let i = 0; i < maxSuggestions; i++) {
+                        const listItem = document.createElement("li");
+                        listItem.textContent = filteredCities[i];
+                        listItem.addEventListener("click", () => {
+                            document.getElementById("destination").value = filteredCities[i];
+                            suggestionBox.style.display = "none";
+                        });
+                        suggestionBox.appendChild(listItem);
+                    }
+                } else {
+                    suggestionBox.style.display = "none";
+                }
+            } else {
+                suggestionBox.style.display = "none";
+            }
+        }
+
+
+        // Validate the number of days input
+        function validateDays() {
+            const daysInput = document.getElementById("days");
+            if (parseInt(daysInput.value) < 0) {
+                daysInput.setCustomValidity("Number of days cannot be less than 0");
+            } else {
+                daysInput.setCustomValidity("");
+            }
+        }
+    </script>
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 GoTravel. All rights reserved.</p>
+    </footer>
+</body>
+</html>
